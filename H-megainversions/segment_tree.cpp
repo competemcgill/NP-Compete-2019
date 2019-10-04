@@ -1,11 +1,11 @@
 /*
    There are two exceptionally hard problems on NP-Compete this year: Megainversions (this problem) and Feistel Fun.
-   This is the second hardest problem because of the relatively obscure data structures required to solve it. 
+   This is the second hardest problem because of the relatively obscure data structures required to solve it.
 
    The question is asking for triplets of decreasing integers on a given array.
-   In order to count this number, we also keep track of decreasing "singlets" of numbers 
+   In order to count this number, we also keep track of decreasing "singlets" of numbers
    and decreasing doubles of numbers with the least number being n.
-   
+
    We then go through the array one by one:
    Each integer always ends off one singlet (itself) and ends off
    many pairs (x,y) where y is our number and x was a singlet greater than y seen before.
@@ -23,7 +23,7 @@
    This problem somewhat resembles a DP problem from summer training, but the O(N^2) solution from that problem
    can't be applied here, since N = 10^5.
 
-   The segment trees we use are not the implementation used in Competitive Programming 3 (Chapter 2.4.2), but rather the one described here:
+   The segment trees we use are not the implementation used in Competitive Programming 3 (Chapter 2.4.3), but rather the one described here:
    https://codeforces.com/blog/entry/18051
  */
 #include <bits/stdc++.h>
